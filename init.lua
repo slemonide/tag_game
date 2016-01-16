@@ -44,6 +44,7 @@ minetest.register_on_joinplayer(function(player)
 	local team_id = math.random(#teams)
 	local team = teams[team_id]
 	set_team(player, team)
+	minetest.chat_send_player(name, "You are in the " .. team .. " team." )
 end)
 
 minetest.register_on_punchplayer(function(player, hitter)
